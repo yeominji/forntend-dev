@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
+<script>
+$(function(){
+	const $obj = $(".par");
+	
+	console.log($obj.length); //2
+	console.log((typeof$obj)+":"+($obj instanceof Array));//배열이 아니라 유사배열
+	console.log($obj[0]);//jQuery Object 가 아니다 HTMLDOM
+	console.log($obj.get(0));//jQuery Object 가 아니다 HTMLDOM
+   
+	$obj.css('color','red');
+	$obj.click(function(){
+			console.log("clicked"+this);
+		 /* var $obj=$(this);
+			$obj.css("text=decoration", "underline");
+			$obj.text("클릭!");  */
+	$(this)
+	  .css("text=decoration", "underline")
+			.text("클릭" );
+			
+			});
+});
+</script>
+</head>
+<body>
+	<h1 id="header">Simple jQuery 만들기1</h1>
+	<p class="par">문장1</p>
+	<p>문장2</p>
+	<p class="par">문장3</p>
+	<p>문장4</p>
+</body>
+</html>

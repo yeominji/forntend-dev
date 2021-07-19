@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+window.addEventListener("load ", function(){
+	const form= document.getElementById("form-login")
+	form.onsubmit=function(){
+		const inputEmail =doucment.getElementById("input-email");
+		if(inputEmail.value==''){
+			alert('이메일이 비어 있습니다. ');
+			return false;
+		}
+	return true;	
+	}
+	const inputpassword =doucment.getElementById("input-password");
+	if(inputEmail.value==''){
+		alert('비밀 번호가 비어 있습니다 .');
+		return false;
+	}
+});
+</script>
+</head>
+<body>
+<form id="form-login" method="post" action="/user/auth">
+    <label>이메일 </label> 
+     <input type ="text" name ="email" id="input-email"/>
+     <br/><br/>
+     <label>비밀번호  </label> 
+     <input type ="text" name ="pasword" id="input-password"/>
+     <br/> <br/>
+     
+     <button> 로그인 </button>
+</form>
+</body>
+</html>
